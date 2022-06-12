@@ -7,10 +7,90 @@
     <meta name="theme-color" content="#000000" />
 
     <title>Pranav Bakre | Software Engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <noscript> You need to enable javascript to run this app </noscript>
-    <div id="root" style="display:flex"></div>
+    <div id="body">
+      <div id="summary">
+        <img
+          id="profile-photo"
+          src="profile-photo.png"
+          style="
+            margin-top: 3rem;
+            height: 20%;
+            border-radius: 9999px;
+            filter: grayscale(15%);
+          "
+        />
+        <div id="name">Pranav Bakre</div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding-top: 1rem;
+          "
+        >
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/pranav-bakre/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin-in" style="color: white"></i
+          ></a>
+          <a
+            class="icon-link"
+            href="https://twitter.com/psbakre"
+            target="_blank"
+            ><i class="fa-brands fa-twitter" style="color: white"></i
+          ></a>
+          <a
+            class="icon-link"
+            href="https://github.com/PranavBakre"
+            target="_blank"
+            ><i class="fa-brands fa-github" style="color: white"></i
+          ></a>
+        </div>
+        <div style="padding: 2rem; display: flex; justify-content: center">
+          <a
+            class="resume-link"
+            href="PranavBakre07-04-2022.pdf"
+            target="_blank"
+            >Download Resume</a
+          >
+        </div>
+      </div>
+      <div style="padding: 2rem; padding-top: 5%">
+        <section id="home">
+          <h2>About Me</h2>
+          <div style="padding-top: 2rem">
+            <p style="font-size: 1.2rem">
+              I am a geek passionate about web development and software
+              engineering. Love to learn new languages, frameworks and
+              technologies. Always on the lookout for challenging statements and
+              something that intrigues me.
+            </p>
+            <p style="font-size: 1.2rem; padding-top: 1.5rem">
+              I am a Mulesoft Certified Developer working on developing
+              Integration Solutions using the Mule Runtime and Mulesoft's
+              Anypoint Platform. My work revolves around developing API-led
+              solutions, writing Specifications using REST API Markup Language
+              (RAML) and OpenAPI Specification, using them to write Mule
+              applications that communicate with each other, integrating end
+              systems like databases, applications, etc to return a unified
+              interface for clients to communicate over with.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="menu">
+      <i class="fa-solid fa-house menu-icon"></i>
+    </div>
   </body>
 </html>
