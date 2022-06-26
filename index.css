@@ -43,6 +43,7 @@ a {
   border-top-left-radius: 10px;
   background-color: rgba(0, 0, 0, 0.1);
   padding-top: 5%;
+  box-sizing: border-box;
 }
 
 #profile-photo {
@@ -154,4 +155,14 @@ a {
     padding-top: initial;
     padding-left: 10px;
   }
+}
+
+@media screen and (max-aspect-ratio: 9/16) {
+  section {
+    padding: 0;
+    margin: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  
 }
