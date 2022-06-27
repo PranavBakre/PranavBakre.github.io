@@ -81,6 +81,12 @@ a {
   background-color: rgb(11, 160, 255, 0.8);
 }
 
+.tag {
+  padding: 0.5rem;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
 #content {
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -132,6 +138,9 @@ a {
     width: 80%;
     height: 75%;
     margin-top: 2rem;
+  }
+  #content {
+    overflow: initial;
   }
   #summary {
     width: 100%;
