@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "2.0.0-alpha1",
+  "description": "Personal Portfolio",
+  "type": "module",
+  "scripts": {
+    "build": "node main.js",
+    "start": "SET NODE_ENV=development && node main.js && serve dist"
+  },
+  "keywords": [],
+  "author": "Pranav Bakre",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.15.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.2",
+    "serve": "^14.0.1",
+    "static-server": "^2.2.1"
+  }
+}
