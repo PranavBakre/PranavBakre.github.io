@@ -11,13 +11,19 @@ Object.keys(process.env).forEach((key) => {
     properties[key] = JSON.stringify(process.env[key]);
   }
 })
-0-
-fs.rmSync("dist", {recursive: true, force: true})
+
+fs.rmSync("dist/*", {recursive: true, force: true})
 await esbuild.build({
     entryPoints: ['index.jsx'],
     bundle: true,
     outfile: 'dist/app.js',
     sourcemap: true,
-    define: properties
+    define: properties,
+    watch: {
+      onRebuild(error, result) {
+        if (error) console.error('watch build failed:', error)
+        else console.log('watch build succeeded:', result.stop)
+      },
+    },
   }).catch(() => console.log("Test"))
 fs.copyFileSync("index.html", "dist/index.html")

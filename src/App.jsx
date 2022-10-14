@@ -1,5 +1,8 @@
+import router from "pages";
 import React from "react";
+import { RouterProvider } from "react-router-dom";
 export default function App (props) {
-    console.log(CUSTOM_APP);
-    return <div>Hi</div>
+    return (
+        <RouterProvider router={router} />
+    )
 }
