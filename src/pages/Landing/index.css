@@ -7,7 +7,7 @@
     position: relative; 
     top: 30%;
     left: 35%;
-    transform: translate(-32%, -70%);
+    transform: translate(-32%, -30%);
     width: 60%
 }
 
@@ -34,10 +34,19 @@
     font-size: 2rem;
 }
 
+
+.tag {
+    padding: 0.25rem;
+    background-color: rgba(235, 192, 134,0.1);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .page-section > div {
-        transform: translate(-32%, -30%);
+        transform: translate(-32%, -25%);
+        width: 80%
     }
     #home > div {
         width: 15rem;
@@ -53,5 +62,9 @@
 
     #home > div >.line3 {
         font-size: 1.2rem;
+    }
+
+    .extra-content {
+        display: none
     }
 }
