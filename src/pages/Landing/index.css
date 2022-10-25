@@ -1,14 +1,24 @@
 .page-section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
- 
+
 .page-section > div {
+    position: relative; 
+    top: 30%;
+    left: 35%;
+    transform: translate(-32%, -70%);
+    width: 60%
+}
+
+
+#home > div {
     height: 11rem;
+    width: 30rem;
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -70%);
+    transform: translate(-70%, -70%);
 }
 
 #home > div >.line1 {
@@ -26,30 +36,22 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .page-section > div {
+        transform: translate(-32%, -30%);
+    }
+    #home > div {
+        width: 15rem;
+        transform: translate(-50%, -50%);
+    }
     #home > div >.line1 {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 
     #home > div >.line2 {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     #home > div >.line3 {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-    #home > div >.line1 {
-        font-size: 1.5rem;
-    }
-
-    #home > div >.line2 {
-        font-size: 1rem;
-    }
-
-    #home > div >.line3 {
-        font-size: 0.8rem;
-    }
-} */
