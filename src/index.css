@@ -4,7 +4,16 @@ html::-webkit-scrollbar {
 
 html {
     scrollbar-width: none;
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
+
+div {
+    font-size: 24px;
+}
+
+body {
+    font-family: 'Caveat';
 }
 
 #react-root {
