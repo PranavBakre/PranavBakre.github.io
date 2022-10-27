@@ -61,12 +61,18 @@ function Landing() {
         <div style={{ color: "white" }}>
             <section id="home" ref={element => elemRef.current["home"] = element} className="page-section">
                 <div>
-                    <div className="line1" onClick={() => navigate("#about")}>Hi</div>
+                    <div className="line1">Hi</div>
                     <div className="line2">
                         I'm <span style={{ color: "rgb(235, 192, 134)" }}>{name}</span>
                     </div>
                     <div className="line3">
                         {subtitle}
+                    </div>
+                    <div style={{paddingTop: "1rem", paddingLeft: 0, marginLeft: 0, fontSize: "1.5rem", display: "flex",gap: "0.8rem"}}>
+                        <a  href="https://www.linkedin.com/in/pranav-bakre/" target="_blank"><i
+                           className="icon-link fa-brands fa-linkedin-in" style={{color: "white"}}></i></a>
+                        <a  href="https://twitter.com/psbakre" target="_blank"><i className="fa-brands fa-twitter icon-link" style={{color: "white"}}></i></a>
+                        <a  href="https://github.com/PranavBakre" target="_blank"><i className="fa-brands fa-github icon-link" style={{color: "white"}}></i></a>
                     </div>
                 </div>
             </section>
@@ -128,12 +134,12 @@ function Landing() {
                             </a>
                         </h3>
                         <div>
-                            A system for detecting whether a person is depressed or not. The final year project was composed of two major modules
+                            A system for detecting whether a person is depressed or not.<span className="extra-content"> The final year project was composed of two major modules</span>
                         </div>
-                        <div>
+                        <div className="extra-content">
                             1. Checking the depressive state based on a modified PHQ-9 questionnaire
                         </div>
-                        <div>
+                        <div className="extra-content">
                             2. Estimating the depressive state based on the Heart Rate Variability retrieved from a fitness tracker
                         </div>
                     </div>
@@ -145,12 +151,12 @@ function Landing() {
                             </a>
                         </h3>
                         <div>
-                            An automated system which would look over plants, It consisted of
+                            An automated system which would look over plants<span className="extra-content">, It consisted of</span>
                         </div>
-                        <div>1. Automatic watering system which would water the plants between a specific time range, if the soil is
+                        <div className="extra-content">1. Automatic watering system which would water the plants between a specific time range, if the soil is
                             dry</div>
-                        <div>2. Temperature control, to maintain the temperature of the green house</div>
-                        <div>3. Providing artificial sunlight to plants when there was absence of light during daytime</div>
+                        <div className="extra-content">2. Temperature control, to maintain the temperature of the green house</div>
+                        <div className="extra-content">3. Providing artificial sunlight to plants when there was absence of light during daytime</div>
 
                     </div>
                     <div style={{ marginTop: "1rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
@@ -162,9 +168,9 @@ function Landing() {
                         </h3>
                         <div>A Simple Project Template for creating Full Fledged Web Application with Google Oauth using KTOR, Exposed, MySQL and React JS
                         </div>
-                        <div>Basic features:</div>
-                        <div>1. Google Oauth Authorization Code Flow</div>
-                        <div>
+                        <div className="extra-content">Basic features:</div>
+                        <div className="extra-content">1. Google Oauth Authorization Code Flow</div>
+                        <div className="extra-content">
                             2. Ability to add Contact Details, Addresses, etc
                         </div>
                     </div>
