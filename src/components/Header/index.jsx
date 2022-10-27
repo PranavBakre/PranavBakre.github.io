@@ -14,6 +14,7 @@ export function Header (){
             <NavLink to={"#home"} style={homeButtonStyle} custom >Home</NavLink>
             <NavLink to={"#about"} style={buttonStyle} custom >About</NavLink>
             <NavLink to={"#experiences"} style={buttonStyle} custom >Experience</NavLink>
+            <NavLink to={"#projects"} style={buttonStyle} custom >Projects</NavLink>
         </div>
     )
 }

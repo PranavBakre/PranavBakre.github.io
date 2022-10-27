@@ -22,7 +22,7 @@ function Landing() {
         if (intersectionElem && intersectionElem.target.id !== window.location.hash.substring(3)) {
             navigate("#" + intersectionElem.target.id)
         }
-    }, [intersectionOptions, location]),[])
+    }, [intersectionOptions, location]), [])
 
     useEffect(() => {
         if (name.length < message.length) {
@@ -45,17 +45,17 @@ function Landing() {
                 Object.values(elemRef.current).forEach(elem => intersectionObserver?.observe(elem))
             })
             // elem.scrollIntoView()
-            
+
         }
     }, [location])
-    
+
     useEffect(() => {
         Object.values(elemRef.current).forEach(elem => intersectionObserver?.observe(elem))
 
         return () => {
             Object.values(elemRef.current).forEach(elem => intersectionObserver?.unobserve(elem))
         }
-    },[])
+    }, [])
 
     return (
         <div style={{ color: "white" }}>
@@ -70,13 +70,13 @@ function Landing() {
                     </div>
                 </div>
             </section>
-            <section id="about" ref={element => elemRef.current["about"] = element}  className="page-section">
+            <section id="about" ref={element => elemRef.current["about"] = element} className="page-section">
                 <div>
                     <h1>About Me</h1>
                     <div>
-                    I am a geek passionate about web development and software engineering. Love to learn new languages, frameworks and technologies. Always on the lookout for challenging statements and something that intrigues me.
+                        I am a geek passionate about web development and software engineering. Love to learn new languages, frameworks and technologies. Always on the lookout for challenging statements and something that intrigues me.
                     </div>
-                    <div style={{display: "flex",flexWrap: "wrap",gap: "10px", paddingTop: "20px"}}>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", paddingTop: "20px" }}>
                         <div className="tag">JavaScript</div>
                         <div className="tag">HTML</div>
                         <div className="tag">CSS</div>
@@ -90,36 +90,87 @@ function Landing() {
                     </div>
                 </div>
             </section>
-            <section id="experiences" ref={element => elemRef.current["experiences"] = element}  className="page-section">
-            <div>
-                    <h1>My Experiences</h1>
-                    <h3 style={{marginBottom: "1rem"}}>Frontend Engineer | Growth<span style={{color: "#3096ff"}}>X</span> Education Labs
-                    <div style={{fontSize: "1rem"}}>(August 2022 - Present)</div></h3>
-                    
-                    <div>
-                        Building the next generation platform for the top Product Managers and Growth Leaders
-                    </div>
-                    <div style={{paddingTop: "1rem"}} className="extra-content">
-                        GrowthX is a social learning platform for the top 1% leaders. Focused on founders, product & growth functions, we helps smart and highly motivated professionals build an approach towards product growth.
-                    </div>
-                    <h3 style={{paddingTop: "2rem"}}>Senior Software Engineer & Software Engineer | Apisero Inc.
-                    <div style={{fontSize: "1rem"}}>(May 2021 - August 2022)</div>
-                    </h3>
-                    
-                    <div>
-                        Developed complex integration solutions using Anypoint Platform and the Mule Runtime
-                    </div>
-                    <div style={{paddingTop: "1rem"}} className="extra-content">
-                        Apisero is a premier Mulesoft and Salesforce Consulting Partner providing services to automate, integrate and transform businesses
-                    </div>
-                </div>
-            </section>
-            <section id="projects" ref={element => elemRef.current["projects"] = element}  className="page-section">
+            <section id="experiences" ref={element => elemRef.current["experiences"] = element} className="page-section">
                 <div>
-                    
+                    <h1>Experiences</h1>
+                    <div style={{ marginTop: "2rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
+                        <h3 style={{ marginBottom: "1rem" }}>Frontend Engineer | Growth<span style={{ color: "#3096ff" }}>X</span> Education Labs
+                            <div style={{ fontSize: "1rem" }}>(August 2022 - Present)</div></h3>
+
+                        <div>
+                            Building the next generation platform for the top Product Managers and Growth Leaders
+                        </div>
+                        <div style={{ paddingTop: "1rem" }} className="extra-content">
+                            GrowthX is a social learning platform for the top 1% leaders. Focused on founders, product & growth functions, we helps smart and highly motivated professionals build an approach towards product growth.
+                        </div>
+                    </div>
+                    <div style={{ marginTop: "2rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
+                        <h3>Senior Software Engineer & Software Engineer | Apisero Inc.
+                            <div style={{ fontSize: "1rem" }}>(May 2021 - August 2022)</div>
+                        </h3>
+
+                        <div>
+                            Developed complex integration solutions using Anypoint Platform and the Mule Runtime
+                        </div>
+                        <div style={{ paddingTop: "1rem" }} className="extra-content">
+                            Apisero is a premier Mulesoft and Salesforce Consulting Partner providing services to automate, integrate and transform businesses
+                        </div>
+                    </div>
                 </div>
             </section>
-        </div>
+            <section id="projects" ref={element => elemRef.current["projects"] = element} className="page-section">
+                <div style={{ transform: "translate(-32%, -25%)" }}>
+                    <h1>Projects</h1>
+                    <div style={{ marginTop: "1rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
+                        <h3>VPPR: A System for Detecting Depression&nbsp;
+                            <a href="https://github.com/VPPR" style={{ textDecoration: "none", color: "rgb(235, 192, 134)" }}>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </h3>
+                        <div>
+                            A system for detecting whether a person is depressed or not. The final year project was composed of two major modules
+                        </div>
+                        <div>
+                            1. Checking the depressive state based on a modified PHQ-9 questionnaire
+                        </div>
+                        <div>
+                            2. Estimating the depressive state based on the Heart Rate Variability retrieved from a fitness tracker
+                        </div>
+                    </div>
+                    <div style={{ marginTop: "1rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
+                        <h3>
+                            Green Incubator: An automated greenhouse&nbsp;
+                            <a href="https://github.com/rujulwalvekar/IoT-GreenHouse" style={{ textDecoration: "none", color: "rgb(235, 192, 134)" }}>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </h3>
+                        <div>
+                            An automated system which would look over plants, It consisted of
+                        </div>
+                        <div>1. Automatic watering system which would water the plants between a specific time range, if the soil is
+                            dry</div>
+                        <div>2. Temperature control, to maintain the temperature of the green house</div>
+                        <div>3. Providing artificial sunlight to plants when there was absence of light during daytime</div>
+
+                    </div>
+                    <div style={{ marginTop: "1rem", padding: "0.5rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "5px" }}>
+                        <h3>
+                            A Simple Web App in Ktor and React&nbsp;
+                            <a href="https://github.com/PranavBakre/A-simple-web-app-in-ktor-and-react" style={{ textDecoration: "none", color: "rgb(235, 192, 134)" }}>
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </h3>
+                        <div>A Simple Project Template for creating Full Fledged Web Application with Google Oauth using KTOR, Exposed, MySQL and React JS
+                        </div>
+                        <div>Basic features:</div>
+                        <div>1. Google Oauth Authorization Code Flow</div>
+                        <div>
+                            2. Ability to add Contact Details, Addresses, etc
+                        </div>
+                    </div>
+                </div>
+            </section >
+        </div >
     )
 }
 
